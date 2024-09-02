@@ -1,0 +1,33 @@
+[
+  {"settings": [
+    {"id":  1},
+    {"name": "Portal Room"},
+    {"description":  "You materialize in a room bathed in brilliant white light, with the walls, floor, and ceiling all blending seamlessly into each other, as if you’re standing inside an endless, smooth void. The surface beneath your feet feels cool and glassy, reflecting your form with a faint, ethereal glow. Every edge and corner around you is perfectly rounded, erasing any sense of sharpness, making the space feel both infinite and contained at the same time. The only thing here besides you is the portal - a shimmering, swirling oval of light directly beneath you, gently pulsing as if it's alive, waiting for your next move. The air is crisp, carrying a faint hum, a reminder that this room is a digital construct, as sterile and pristine as the code that brought you here."},
+    {"short_description": "#"},
+    {"items": ["Knife", "Phone"]},
+    {"exits": [
+      {"north":  2},
+      {"east":  3}
+    ]}
+  ]},
+  {"settings": [
+    {"id":  2},
+    {"name": "Corridor"},
+    {"description":  "#"},
+    {"short_description": "#"},
+    {"items": []},
+    {"exits": [
+      {"south":  1}
+    ]}
+  ]},
+  {"settings": [
+    {"id":  3},
+    {"name": "Toilet"},
+    {"description":  "#"},
+    {"short_description": "#"},
+    {"items": []},
+    {"exits": [
+      {"west":  1}
+    ]}
+  ]}
+]
