@@ -1,1 +1,2 @@
-print("Hi {{{0}}}!".format("Bilbo"))
+my_str = 'Agt2t3afc2kjMhagrds!'
+print(my_str[::2])
