@@ -1,5 +1,7 @@
 # GameController.py
 from objects.Player import Player
+from objects.Room import Room
+from controllers.InputController import InputController
 
 def validate_player_name():
     while True:
@@ -19,15 +21,28 @@ def validate_player_name():
         return player_name
 
 class GameController:
+    game = None
     def __init__(self):
         self.player = Player()    # Create a new player
         self.input = ''     # Create a new input handler
+        self.current_room = 1    # A reference to the room that the player is currently in
+        GameController.game = self
 
-        self.current_room = None    # A reference to the room that the player is currently in
+    def change_room(self, room_id):
+        # Get a reference to the room
+        if room := self.get_room(room_id):
+            room.describe()
+
+    def get_room(self, id):
+        for room in Room.rooms:
+            if room.id == id:
+                return room
+        return None
 
     def game_loop(self):
         if self.player.name == '':
             self.player.name = validate_player_name()
+            self.change_room(1)
         while True:
-            user_input = input("> ")
+            InputController.handle_input(input("> "))
 
