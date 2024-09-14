@@ -44,3 +44,19 @@ numbers = '0123456789'
 print('All numbers: {}'.format(numbers[::]))
 print('Every other number: {}'.format(numbers[::2]))
 print('Every third number between 1 and 8: {}'.format(numbers[1:9:3]))
+
+# Generator and list comprehension example
+# I just learned about generators and list comprehension and wanted to try one here
+def findall(needle, haystack):
+    # Yields all the positions of the pattern 'needle' in the string 'haystack'.
+    occurrence = haystack.find(needle)
+    while occurrence != -1:
+        yield occurrence
+        occurrence = haystack.find(needle, occurrence+1)
+
+# Get the input
+search_string = input()
+# Build a list of all occurrences of needle in haystack
+occurrences = [index for index in findall(search_string[0], search_string)]
+# Print the number of occurrences excluding the needle
+print(len(occurrences[1:]))

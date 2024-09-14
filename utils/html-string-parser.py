@@ -24,8 +24,8 @@ def format_html(html):
         formatted_html += ">\n"
 
     # Add the contents between the tags, if any
-    if tag.string:
-        formatted_html += f"  {tag.string}\n"
+    if tag.search_string:
+        formatted_html += f"  {tag.search_string}\n"
 
     # Add the closing tag
     formatted_html += f"</{tag.name}>\n"
