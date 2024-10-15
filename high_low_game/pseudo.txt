@@ -1,0 +1,57 @@
+START
+
+WHILE the program is running
+
+    PROMPT the user to enter "quit" at any time to quit the program
+
+    PROMPT the user to enter the lower bound of the guessing range
+    READ the user submitted lower bound
+
+    IF the user input is "quit" THEN
+        DISPLAY a goodbye message
+        END the program
+    ENDIF
+
+    PROMPT the user to enter the upper bound of the guessing range
+    READ the user submitted upper bound
+
+    IF the user input is "quit" THEN
+        DISPLAY a goodbye message
+        END the program
+    ENDIF
+
+    IF the upper bound is not greater than the lower bound THEN
+        DISPLAY "Invalid bounds. Ensure the upper bound is greater than the lower bound."
+        CONTINUE to the next iteration
+    ENDIF
+
+    GENERATE a random number between the lower bound and the upper bound (inclusive)
+
+    WHILE the user has not guessed the correct number
+
+        PROMPT the user to guess a number between the lower bound and the upper bound
+        READ the user submitted guess
+
+        IF the user input is "quit" THEN
+            DISPLAY a goodbye message
+            END the program
+        ENDIF
+
+        IF the guess is NOT within the range of the lower and upper bound THEN
+            DISPLAY "Invalid guess. Please enter a number within the range."
+            CONTINUE to the next iteration
+        ENDIF
+
+        IF the random number is greater than the user's guess THEN
+            DISPLAY "The number is higher than your guess. Try again."
+        ELSEIF the random number is less than the user's guess THEN
+            DISPLAY "The number is lower than your guess. Try again."
+        ELSE
+            DISPLAY "Congratulations! You guessed the correct number."
+        ENDIF
+
+    ENDWHILE
+
+ENDWHILE
+
+END
