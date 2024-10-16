@@ -1,4 +1,4 @@
-# ModuleSixMilestone.py
+# ModuleSixAssignment.py
 # J. Aaron Blevins
 # IT-140
 # Professor Agarwal
@@ -45,9 +45,9 @@ inventory: list = []  # this list stores the items in the player's inventory
 # Check to see if the current state of the game calls for ending the game
 # This function checks to see if all the items have been collected before encountering the boss
 def check_for_end_state(_current_room):
-    if _current_room == 'Laboratory' and len(items) != 0: # If the player is in the boss room and all of the items haven't been collected, game over
+    if _current_room == 'Laboratory' and len(items) != 0: # If the player is in the boss room and all the items haven't been collected, game over
         exit("You encountered the ghost of the manor wizard unprepared! Game over!")
-    if _current_room == 'Laboratory' and len(items) == 0: # If the player is in the boss room and all of the items have been collected, you win.
+    if _current_room == 'Laboratory' and len(items) == 0: # If the player is in the boss room and all the items have been collected, you win.
         exit("You confront the ghost of the manor wizard and dispel him with your artifacts. You win!")
 
 # Get a list of exits for the current room
